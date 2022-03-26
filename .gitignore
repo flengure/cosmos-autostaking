@@ -1,2 +1,8 @@
 #profiles/*
 *.log
+*.cerberus_dad
+*.cerberus_exodus
+*.cerberus_keplr1
+*.cerberus_tosu
+*.cerberus_profile2
+

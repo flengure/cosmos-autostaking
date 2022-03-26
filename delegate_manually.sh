@@ -30,6 +30,16 @@ PROFILE_PATH="${p}"
 
 source ${PROFILE_PATH}
 
+for DELEGATOR in ${DELEGATOR_KEYS}; do
+    echo ${DELEGATOR_NAME}
+    DELEGATOR=$(${BINARY} keys show ${DELEGATOR_NAME} -a)
+
+    echo ${DELEGATOR}
+
+done
+exit
+
+
 if [[ -z "$AMOUNT_TO_KEEP_AVAILABLE" ]]; then
     AMOUNT_TO_KEEP_AVAILABLE=100000
 fi

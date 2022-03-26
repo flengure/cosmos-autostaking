@@ -42,7 +42,14 @@ getFinalDelegateBalance () {
 
 withdrawRewardsAction() {
     echo "------ REWARDS ------"
-    ${BINARY} tx distribution withdraw-rewards ${VALIDATOR} --from ${DELEGATOR_NAME} --commission ${GAS_PRICES} ${DETAILS} -y
+    # If this is the validator claim commissions too
+    #${BINARY} tx distribution withdraw-rewards ${VALIDATOR} --from ${DELEGATOR_NAME} --commission ${GAS_PRICES} ${DETAILS} -y
+    # If this is NOT the validator DO NOT claim commissions too
+    if [[ "${VALIDATOR_NAME}" == "${DELEGATOR_NAME}" ]]; then
+        ${BINARY} tx distribution withdraw-rewards ${VALIDATOR} --from ${DELEGATOR_NAME} --commission ${GAS_PRICES} ${DETAILS} -y
+    else
+        ${BINARY} tx distribution withdraw-rewards ${VALIDATOR} --from ${DELEGATOR_NAME} ${GAS_PRICES} ${DETAILS} -y
+    fi
 }
 delegateAction() {
     balance=$(getDelegateBalance)
