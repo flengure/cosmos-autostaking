@@ -4,6 +4,7 @@ usage() {
     echo "Usage: $0 -p [file]" 1>&2
     exit 1
 }
+# delete this line
 
 while getopts ":p:" option; do
     case "${option}" in
