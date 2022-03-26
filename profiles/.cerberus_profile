@@ -6,15 +6,15 @@ KEYRING_BACKEND="os"
 
 # Password
 # Required if keyring-backend is "file" or "os"
-PASSWD="M8jm7Xw4cp"
+PASSWD=""
 
 # Cerberus Wallet Name (`cerberusd keys list`)
 # Example: DELEGATOR_NAME="EZStaking"
-DELEGATOR_NAME="dad"
+DELEGATOR_NAME=""
 
 # Cerberus Wallet Address (`cerberusd keys show CerberusWalletName -a`)
 # Example: DELEGATOR="cerberus16vcwhpzd6hfsm5n0fxz9880lvkgjnpwyuhmmnv"
-DELEGATOR="cerberus1442ks20qpww9e2rkt4edxj6qcjzhm500hvwwdj"
+DELEGATOR=""
 
 # Cerberus Validator Address
 # Example: VALIDATOR="cerberusvaloper16vcwhpzd6hfsm5n0fxz9880lvkgjnpwyxqncyt"
