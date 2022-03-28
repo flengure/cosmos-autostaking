@@ -1,0 +1,21 @@
+
+source profiles/.cerberus_profile
+
+# Password
+# Required if keyring-backend is "file" or "os"
+PASSWD="M8jm7Xw4cp"
+
+# Cerberus Wallet Name (`cerberusd keys list`)
+# Example: DELEGATOR_NAME="EZStaking"
+
+# Cerberus Wallet Address (`cerberusd keys show CerberusWalletName -a`)
+# Example: DELEGATOR="cerberus16vcwhpzd6hfsm5n0fxz9880lvkgjnpwyuhmmnv"
+
+# Cerberus Validator Address
+# Example: VALIDATOR="cerberusvaloper16vcwhpzd6hfsm5n0fxz9880lvkgjnpwyxqncyt"
+VALIDATOR="cerberusvaloper1sva8pqqcyehwmcrlye3ak0ujltfpp5jt58sjhl"
+
+# If this machine is running a validator and the validator key is stored 
+# on this machine then lets set this validator_name to the name of this key
+# We will check later to know if we collect commissions
+VALIDATOR_NAME="keplr1"
